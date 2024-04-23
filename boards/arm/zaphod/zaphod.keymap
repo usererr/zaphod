@@ -23,10 +23,22 @@
     combos {
         compatible = "zmk,combos";
 
+        oth_mo {
+	    timeout-ms = <50>;
+            key-positions = <30 33>;
+            bindings = <&mo OTH_L>;
+        };
+
         med_mo {
 	    timeout-ms = <50>;
             key-positions = <30 31>;
             bindings = <&mo MED_L>;
+        };
+
+        caps {
+	    timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&caps_word>;
         };
 
         fn_mo {
@@ -54,10 +66,10 @@
         default_layer {
             label = "Base";
             bindings = <
-                &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
-                &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F    &kp G         &kp H            &hm RSHFT J    &hm RCTRL K &hm LALT L &hm LGUI QUOT
-                &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
-                                                  &lt NAV_L TAB  &lt OTH_L RET &lt NUM_L SPACE  &lt SYM_L BKSP
+                &kp Y         &kp C      &kp L       &kp M          &kp K         &kp Z            &kp F          &kp U       &kp COMMA  &kp SQT
+                &hm LGUI I    &hm LALT S &hm LCTRL R &hm LSHFT T    &kp G         &kp P            &hm RSHFT N    &hm RCTRL E &hm LALT A &hm LGUI O
+                &kp Q         &kp V      &kp W       &kp D          &kp J         &kp B            &kp H          &kp FSLH    &kp DOT    &kp X
+                                         &lt NAV_L TAB   &lt NUM_L SPACE          &lt SYM_L BKSP  &lt NAV_L RET   
             >;
         };
 
@@ -84,20 +96,20 @@
         num_layer {
             label = "Num";
             bindings = <
-                &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
-                &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                &kp GRAVE  &kp N1     &kp N2      &kp N3          &kp BSLH      &trans          &trans         &trans      &trans     &trans
-                                                  &kp N0          &kp MINUS     &trans          &trans
+                &kp ESC   &kp DEL    &kp LPAR      &kp RPAR         &kp COLON     &kp GRAVE        &kp N7         &kp N8      &kp N9     &kp MINUS
+                &kp LT    &kp GT     &kp LBKT      &hm LSHFT RBKT   &kp TILDE     &kp FSLH         &hm RSHFT N4   &kp N5      &kp N6     &kp SEMI
+                &kp FSLH  &kp BSLH   &kp LBRC      &kp RBRC         &kp PIPE      &kp N0           &kp N1         &kp N2      &kp N3     &kp EQUAL
+                                                   &trans           &trans        &trans           &kp N0
             >;
         };
 
         sym_layer {
             label = "Sym";
             bindings = <
-                &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC        &trans &trans   &trans    &trans    &trans
-                &kp COLON    &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS        &trans &trans   &trans    &trans    &trans
-                &kp TILDE    &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)    &trans &trans   &trans    &trans    &trans
-                                                   &kp LS(N0) &kp UNDER         &trans &trans
+                &kp ESC   &kp DEL     &kp LPAR      &kp RPAR         &kp COLON        &kp SQT   &kp AMPS  &kp STAR   &kp GRAVE  &kp UNDER
+                &kp LT    &kp GT      &kp LBKT      &hm LSHFT RBKT   &kp TILDE        &kp DQT   &hm RSHFT DLLR  &kp PRCNT  &kp CARET  &kp COLON
+                &kp FSLH  &kp BSLH    &kp LBRC      &kp RBRC         &kp PIPE         &kp GRAVE &kp EXCL  &kp AT     &kp HASH   &kp PLUS
+                                                   &trans   &trans         &trans &trans
             >;
         };
 
