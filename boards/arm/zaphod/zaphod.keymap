@@ -69,7 +69,7 @@
                 &kp Y         &kp C      &kp L       &kp M          &kp K         &kp Z            &kp F          &kp U       &kp COMMA  &kp SQT
                 &hm LGUI I    &hm LALT S &hm LCTRL R &hm LSHFT T    &kp G         &kp P            &hm RSHFT N    &hm RCTRL E &hm LALT A &hm LGUI O
                 &kp Q         &kp V      &kp W       &kp D          &kp J         &kp B            &kp H          &kp FSLH    &kp DOT    &kp X
-                                         &lt NAV_L TAB   &lt NUM_L SPACE          &lt SYM_L BKSP  &lt NAV_L RET   
+                                         &lt NAV_L TAB   &lt NUM_L SPACE          &lt SYM_L RET  &lt NAV_L BKSP   
             >;
         };
 
